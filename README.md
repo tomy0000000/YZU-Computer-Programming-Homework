@@ -38,3 +38,10 @@ Homework for CS106/A Class in Semester 1061
 	1. 完成以struct寫成大數計算中的`equal`,`less`,`subtraction`,`multiplication`,`division`函式
 	2. 完成以class寫成大數計算中的`equal`,`less`,`subtraction`,`multiplication`,`division`函式
 	3. 完成以vector寫成大數計算中的`equal`,`less`,`subtraction`,`multiplication`,`division`函式
+* Assignment 8 (Week 10)
+	1. 完成以包含動態宣告array的struct寫成大數計算中的`equal`,`less`,`subtraction`,`multiplication`,`division`函式
+* Assignment 9 (Week 11)
+	1. 完成以STL string寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
+	2. 完成以char vector寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
+	3. 完成以包含動態宣告array的struct寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
+	4. 完成以包含動態宣告array的class寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
