@@ -6,7 +6,10 @@ Homework for CS106/A Class in Semester 1061
 部分Code會附帶思路分析，建議有興趣的同學先自行完成作業後再閱讀   
 若有任何問題或建議歡迎於Issues提出討論
 
-# Menu
+# Case Studies
+* [Huge Integer Calculation](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/Huge%20Integer%20Calculation/Huge%20Integer%20Calculation.md)
+
+# Menu of Assignment
 * Assignment 1 (Week 1)
 	1. 判斷奇偶數
 	2. 5位數數字分別印出 (中間加空格)
@@ -45,3 +48,5 @@ Homework for CS106/A Class in Semester 1061
 	2. 完成以char vector寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
 	3. 完成以包含動態宣告array的struct寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
 	4. 完成以包含動態宣告array的class寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
+* Assignment 10 (Week 12)
+	1. 製作威秀影城會員系統 (除了`buyTicket`函式)

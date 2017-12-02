@@ -288,13 +288,6 @@ void division(int dividend[], int divisor[], int quotient[], int remainder[],
         remainder[i] = dividend[i];
     }
     
-    //End Function if Dividend is Smaller
-    if (less(dividend, divisor, dividendSize, divisorSize)) {
-        quotientSize = 1;
-        quotient[0] = 0;
-        return;
-    }
-    
     //Create Buffer
     int bufferSize = dividendSize;
     int buffer[200];
@@ -313,18 +306,11 @@ void division(int dividend[], int divisor[], int quotient[], int remainder[],
     
     //Calculate Remainder One Unit at One Time
     for (int k = quotientSize - 1; k >= 0; k--) {
-        
         while (less(buffer, remainder, bufferSize, remainderSize) || equal(buffer, remainder, bufferSize, remainderSize)) {
             subtraction(remainder, buffer, remainder, remainderSize, bufferSize, remainderSize);
             quotient[k]++;
-            
-            //Examine Remainder
-            if (isZero(remainder, remainderSize)) {
-                return;
-            }
         }
         divideBy10(buffer, bufferSize);
-        
     }
     
 }
@@ -341,3 +327,4 @@ void divideBy10(int hugeInt[], int & size) {
         hugeInt[size] = 0;
     }
 }
+
