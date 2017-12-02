@@ -7,7 +7,7 @@ Homework for CS106/A Class in Semester 1061
 若有任何問題或建議歡迎於Issues提出討論
 
 # Case Studies
-* [Huge Integer Calculation](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/Huge%20Integer%20Calculation/Huge%20Integer%20Calculation.md)
+* [Huge Integer Calculation](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/README.md)
 
 # Menu of Assignment
 * Assignment 1 (Week 1)
@@ -49,4 +49,4 @@ Homework for CS106/A Class in Semester 1061
 	3. 完成以包含動態宣告array的struct寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
 	4. 完成以包含動態宣告array的class寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
 * Assignment 10 (Week 12)
-	1. 製作威秀影城會員系統 (除了`buyTicket`函式)
+	1. 製作威秀影城會員系統 (除了`buyTicket`功能)
