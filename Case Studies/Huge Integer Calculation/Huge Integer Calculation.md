@@ -1,9 +1,9 @@
 # Huge Integer Calculation
-這應該是基哥眾多作業中最令人頭痛的一個，
-因為這份作業內容本來就很乏味，
-重點是後續很難debug，
-所以我想在這裡留下我當時寫的時候遇到的一些狀況，
-還有一些的改善方式
+這應該是基哥眾多作業中最令人頭痛的一個，  
+因為這份作業內容本來就很乏味，  
+重點是後續很難debug，  
+所以我想在這裡留下我當時寫的時候遇到的一些狀況，  
+還有一些的改善方式。
 
 ## Core Function
 ### 加法
@@ -92,15 +92,15 @@ if( sum[ sumSize - 1 ] == 0 )
     2. 複製`dividend`到`remainder`
     3. 如果`dividend`小於`divisor`，直接結束  
 2. 初始化
-    4. 定義`n`：`divisor`在做第一次的除法時需位移的位數
-    5. 根據`n`製作`buffer`
-    6. 定義`quotientSize`
-    7. 如果`dividend`小於`buffer`，`buffer`向右移一位，如果沒有，`quotientSize`加一
-    8. 清空`quotient`
+    1. 定義`n`：`divisor`在做第一次的除法時需位移的位數
+    2. 根據`n`製作`buffer`
+    3. 定義`quotientSize`
+    4. 如果`dividend`小於`buffer`，`buffer`向右移一位，如果沒有，`quotientSize`加一
+    5. 清空`quotient`
 3. 開始做除法 (反向遍歷`quotient`)
-    9. 只要`buffer`不大於`remainder`，就一位一位加上去
-    10. 如果`remainder`剛好等於0，直接結束
-    11. `buffer`向右移一位
+    1. 只要`buffer`不大於`remainder`，就一位一位加上去
+    2. 如果`remainder`剛好等於0，直接結束
+    3. `buffer`向右移一位
 
 原本的code太長了我就不貼了
 下面直接講我簡化了哪些部分。
@@ -124,9 +124,9 @@ testCases也沒有很多，
 
 比方說：
 
-1. 被除數等於0 (`dividend == 0`)
-2. 被除數小於除數 (`dividend <= divisor`)
-3. ()餘數剛好等於0 (`remainder == 0`)
+1. (Step 1-1)被除數等於0 (`dividend == 0`)
+2. (Step 1-3)被除數小於除數 (`dividend <= divisor`)
+3. (Step 3-2)餘數剛好等於0 (`remainder == 0`)
 
 ## Minor Optimaization Skills
 ### Array Filling
