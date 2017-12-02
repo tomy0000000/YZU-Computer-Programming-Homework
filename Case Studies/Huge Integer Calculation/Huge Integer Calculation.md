@@ -58,9 +58,25 @@ if( sum[ sumSize - 1 ] == 0 )
 但是這樣數一數還是有6個for迴圈，
 所以還是值得簡化一下。
 
-####Step 3的4個迴圈
+#### Step 3的4個迴圈
 光這個步驟就有4個迴圈
 而且根本只是為了處理`addendSize`可能和`adderSize`不一樣這種小問題而寫的，
+所以我的做法是另外命兩個變數 (`faddend`和`fadder`)根據不同的情況決定計算的數字
+這樣就可以有效的把4個迴圈合併成1個
+
+#### 進位的迴圈
+當Step 3算出某一位的值的時候，
+我並沒有馬上把這個值存進Array裡，
+而是先把它存進`Cal`這個暫時的空間裡，
+然後mod 10之後再存進去，同時整除10的部分就存進下一位，
+但這也代表我在下一位做計算的時候必須考慮到前一位進位過來的值，
+所以要記得`Cal`同時還要把原本位在`sum[i]`的值一併加進去做計算
+
+#### 位數檢查
+最後是位數檢查的部分，
+這個步驟也被我整合進for迴圈裡，
+但是因為我有在條件賦值的地方加上條件，
+所以其實只有在迴圈的最後一次執行的時候`sumSize`才有可能會被觸發
 
 ### 減法
 ⚠️Under Construction⚠️
@@ -69,9 +85,50 @@ if( sum[ sumSize - 1 ] == 0 )
 ⚠️Under Construction⚠️
 
 ### 除法
-⚠️Under Construction⚠️
+流程：
 
-## Minor Optimaization
+1. 檢查特例情形
+    1. 如果`dividend`是0，直接結束
+    2. 複製`dividend`到`remainder`
+    3. 如果`dividend`小於`divisor`，直接結束  
+2. 初始化
+    4. 定義`n`：`divisor`在做第一次的除法時需位移的位數
+    5. 根據`n`製作`buffer`
+    6. 定義`quotientSize`
+    7. 如果`dividend`小於`buffer`，`buffer`向右移一位，如果沒有，`quotientSize`加一
+    8. 清空`quotient`
+3. 開始做除法 (反向遍歷`quotient`)
+    9. 只要`buffer`不大於`remainder`，就一位一位加上去
+    10. 如果`remainder`剛好等於0，直接結束
+    11. `buffer`向右移一位
+
+原本的code太長了我就不貼了
+下面直接講我簡化了哪些部分。
+
+### 特例情形的處理
+要處理的特例情形大概有兩種：
+
+1. 不合法的操作：
+這個情況只有一種，也就是除以0，
+但是這個問題在`Perform` call `Dividend`之前就先排除掉了
+所以我們不需要特別處理。
+
+2. 合法，但是可以用比較快的方式先處理掉：
+這種情況就比較多了，
+雖然好處理，可以用if篩出來跳掉，
+但是反正我們的大數也不是真的有多大，
+testCases也沒有很多，
+所以兩害相權取其輕，我選擇把這些部分都拿掉，
+讓code用一般的做法去處理這些看似是特例
+但又不是真的那麼特別的狀況
+
+比方說：
+
+1. 被除數等於0 (`dividend == 0`)
+2. 被除數小於除數 (`dividend <= divisor`)
+3. ()餘數剛好等於0 (`remainder == 0`)
+
+## Minor Optimaization Skills
 ### Array Filling
 ```
 for(int i=0; i<sumSize; i++) {
