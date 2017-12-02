@@ -7,7 +7,8 @@ Homework for CS106/A Class in Semester 1061
 若有任何問題或建議歡迎於Issues提出討論
 
 # Case Studies
-* [Huge Integer Calculation](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/README.md)
+* [Huge Integer Calculation](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/Huge%20Integer%20Calculation/README.md)
+* [File IO](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/File%20IO/README.md)
 
 # Menu of Assignment
 * Assignment 1 (Week 1)
