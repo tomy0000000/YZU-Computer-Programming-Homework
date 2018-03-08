@@ -51,3 +51,7 @@ Homework for CS106/A Class in Semester 1061
 	4. 完成以包含動態宣告array的class寫成子字串搜尋中的`dictionaryWord`,`inputtedWord`函式
 * Assignment 10 (Week 12)
 	1. 製作威秀影城會員系統 (除了`buyTicket`功能)
+* Assignment 11 (Week 13)
+	1. 製作台北信義威秀影城訂票系統
+* Assignment 12 (Week 14)
+	1.	製作台北京站威秀影城會員訂票系統
