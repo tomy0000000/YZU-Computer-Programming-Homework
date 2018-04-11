@@ -1,16 +1,22 @@
-# YZU Computer Programming (I) Homework
-Homework for CS106/A Class in Semester 1061
+# YZU Computer Programming Homework
+Homework for CS106/A & CS114/A
 
 # Introduction
-這裡提供106學年度林基成教授程式設計 (一) 作業的參考解答，   
-部分Code會附帶思路分析，建議有興趣的同學先自行完成作業後再閱讀   
+這裡提供106學年度林基成教授程式設計作業的參考解答，   
+部分Code附帶思路分析，建議有興趣的同學先***自行完成***作業後再閱讀   
 若有任何問題或建議歡迎於Issues提出討論
 
 # Case Studies
+(Will be moved to each Folder in next Major Commit)
+
 * [Huge Integer Calculation](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/Huge%20Integer%20Calculation/README.md)
 * [File IO](https://github.com/tomy0000000/YZU-Computer-Programming-I-Homework/blob/master/Case%20Studies/File%20IO/README.md)
+* Visual Studio Project Configuration
+* 
 
 # Menu of Assignment
+(Will be moved to seperate Folder in next Major Commit)
+
 * Assignment 1 (Week 1)
 	1. 判斷奇偶數
 	2. 5位數數字分別印出 (中間加空格)
