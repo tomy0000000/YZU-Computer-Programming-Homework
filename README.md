@@ -1,7 +1,8 @@
 # YZU Computer Programming Homework
-Homework for:  
-1061 CS106/A 程式設計（一）
-1062 CS114/A 程式設計（二）
+Homework for:
+
+* 1061 CS106/A 程式設計（一）
+* 1062 CS114/A 程式設計（二）
 
 # Introduction
 這裡提供106學年度林基成教授程式設計作業的參考解答，   

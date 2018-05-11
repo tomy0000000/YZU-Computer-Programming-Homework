@@ -1,4 +1,4 @@
-#1062 CS114/A 程式設計(二)
+# 1062 CS114/A 程式設計(二)
 * Assignment 1：自製[STL Vector](http://www.cplusplus.com/reference/vector/vector/)中的`push_back`、`resize`
 * Assignment 2：自製[STL String](http://www.cplusplus.com/reference/string/string/)中的`(Constructor)`、`resize`、`push_back`、`assign`、`erase`、`substr`
 * Assignment 3：Vector + 大數
