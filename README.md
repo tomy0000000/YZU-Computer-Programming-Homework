@@ -18,7 +18,6 @@ Homework for:
 
 # Consider Adding
 * Exam DB
-* Debug Suggestion
 * Compiler
 * Linter
 * Coding C++ on Mac
