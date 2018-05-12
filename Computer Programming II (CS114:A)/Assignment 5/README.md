@@ -3,7 +3,7 @@
 
 我們來看看這兩份的Main Function
 
-```
+```cpp
 // Assignment 5-1.cpp
 HugeInteger<int> n1[numTestCases];
 HugeInteger<int> n2[numTestCases];
@@ -26,7 +26,7 @@ HugeInteger<vector<unsigned short int>> n8[numTestCases];
 ```
 沒有頭緒嗎，那再看看HugeInteger的標頭檔
 
-```
+```cpp
 // HugeInteger - 5-1.h
 private:
   vector<T> integer;
