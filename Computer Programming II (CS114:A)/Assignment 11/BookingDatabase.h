@@ -15,21 +15,19 @@
 
 class BookingDatabase {
 public:
-  BookingDatabase();  // calls loadBookings()
-  ~BookingDatabase(); // calls saveBookings()
-
-  // adds a booking object to the end of the vector bookings
+  BookingDatabase();
+  ~BookingDatabase();
+  // Add newBooking to booking database
   void addBooking(Booking newBooking);
-
-  // returns true if there is a booking object containing specified email
+  // Check if given email has any booking history
   bool existingBooking(string email);
-
+  // Display details of the booking history
   void displayBookings(string email, MovieDatabase &movieDatabase);
 
 private:
-  vector<Booking> bookings; // vector of the bookings
-  void loadBookings();      // loads bookings from the file Bookings.dat
-  void saveBookings();      // stores bookings into the file Bookings.dat
+  vector<Booking> bookings;
+  void loadBookings();
+  void saveBookings();
 };
 
 #endif

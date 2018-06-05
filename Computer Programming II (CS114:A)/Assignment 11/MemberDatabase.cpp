@@ -14,15 +14,13 @@ using std::ios;
 using std::ofstream;
 #include <iostream>
 
-// MemberDatabase default constructor loads members from the file Members.dat
 MemberDatabase::MemberDatabase() { loadMembers(); }
-
-// MemberDatabase destructor saves members into the file Members.dat
 MemberDatabase::~MemberDatabase() { saveMembers(); }
-
 vector<Member>::iterator MemberDatabase::end() { return members.end(); }
+void MemberDatabase::addMember(Member newMember) {
+  members.push_back(newMember);
+}
 
-// retrieve Member object containing specified id
 bool MemberDatabase::existingId(string id) {
   for (vector<Member>::iterator it = members.begin(); it != members.end();
        ++it) {
@@ -33,7 +31,6 @@ bool MemberDatabase::existingId(string id) {
   return false;
 }
 
-// retrieve Member object containing specified email
 bool MemberDatabase::existingEmail(string email) {
   for (vector<Member>::iterator it = members.begin(); it != members.end();
        ++it) {
@@ -42,10 +39,6 @@ bool MemberDatabase::existingEmail(string email) {
     }
   }
   return false;
-}
-
-void MemberDatabase::addMember(Member newMember) {
-  members.push_back(newMember);
 }
 
 vector<Member>::iterator MemberDatabase::getMember(string email,

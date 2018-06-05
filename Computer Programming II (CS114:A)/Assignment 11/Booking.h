@@ -17,18 +17,18 @@ using std::string;
 class Booking {
 public:
   Booking();
-  void setEmail(string theEmail);
   string getEmail();
-  void setMovieCode(int theMovieCode);
   int getMovieCode();
-  void setDateCode(int theDateCode);
   int getDateCode();
-  void setSessionTimeCode(int theSessionTimeCode);
   int getSessionTimeCode();
-  void setNumTickets(int theNumTickets[]);
   int getNumTickets(int ticketType);
-  void setSeletedSeats(string theSeletedSeats[], int numSeats);
   string getSeletedSeat(int number);
+  void setEmail(string theEmail);
+  void setMovieCode(int theMovieCode);
+  void setDateCode(int theDateCode);
+  void setSessionTimeCode(int theSessionTimeCode);
+  void setNumTickets(int theNumTickets[]);
+  void setSeletedSeats(string theSeletedSeats[], int numSeats);
   void displayBooking(MovieDatabase &movieDatabase);
 
 private:
@@ -36,12 +36,9 @@ private:
   int movieCode;
   int dateCode;
   int sessionTimeCode;
-  int numTickets[4]; // numTickets[0]: the number of adult tickets,
-                     // numTickets[1]: the number of concession tickets,
-                     // numTickets[2]: the number of disability tickets,
-                     // numTickets[3]: the number of elderly tickets
-  char seletedSeats[24]
-                   [3]; // seleted seats for the user with the specified email
+  int numTickets[4];
+  // For Adult, Concession, Disability, Elderly ticket Respectivly
+  char seletedSeats[24][3]; // Seleted Seats Number
 };
 
 #endif

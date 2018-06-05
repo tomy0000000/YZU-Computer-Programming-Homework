@@ -19,9 +19,13 @@ MemberDetails::MemberDetails(MemberDatabase &theMemberDatabase)
     : memberDatabase(theMemberDatabase) {}
 
 void MemberDetails::execute(vector<Member>::iterator it) {
+
+  // Display Details
   it->display();
-  int choice = -1;
   cout << endl;
+
+  // Menu for Adjusting
+  int choice = -1;
   do {
     cout << "Which one do you want to modify (0 – not modify)" << endl << "? ";
     choice = inputAnInteger(0, 5);
@@ -30,8 +34,9 @@ void MemberDetails::execute(vector<Member>::iterator it) {
       cout << "--------------------" << endl;
     }
   } while (choice == -1);
-
   cout << "--------------------" << endl;
+
+  // Editing Menu
   string query;
   if (choice) {
     cout << "Enter correct data: ";

@@ -66,15 +66,15 @@ public:
   ~vector();
 
   const vector &operator=(const vector &x);
-  T &operator[](unsigned int n) { return *(myFirst + n); }
-  const T &operator[](unsigned int n) const { return *(myFirst + n); }
+  T &operator[](long n) { return *(myFirst + n); }
+  const T &operator[](long n) const { return *(myFirst + n); }
 
   iterator begin() const { return iterator(myFirst); }
   iterator end() const { return iterator(myLast); }
-  unsigned int size() const { return (myLast - myFirst); }
-  unsigned int capacity() const { return (myEnd - myFirst); }
+  long size() const { return (myLast - myFirst); }
+  long capacity() const { return (myEnd - myFirst); }
 
-  void resize(unsigned int n);
+  void resize(long n);
   void push_back(const T val);
 
 private:
@@ -118,18 +118,18 @@ const vector<T> &vector<T>::operator=(const vector<T> &x) {
 }
 
 template <typename T>
-void vector<T>::resize(unsigned int n) {
+void vector<T>::resize(long n) {
 #if defined(__GNUC__) || defined(__GNUG__) // GNU GCC/G++
   const float COMPILER_GROWTH_FECTOR = 2;
 #elif defined(_MSC_VER) // Microsoft Visual Studio
   const float COMPILER_GROWTH_FECTOR = 1.5;
 #endif
   T *tempPtr = myFirst;
-  int orgSize = size();
-  int newCap = (n <= capacity()) ? capacity()
-                                 : (n <= capacity() * COMPILER_GROWTH_FECTOR)
-                                       ? capacity() * COMPILER_GROWTH_FECTOR
-                                       : n;
+  long orgSize = size();
+  long newCap = (n <= capacity()) ? capacity()
+                                  : (n <= capacity() * COMPILER_GROWTH_FECTOR)
+                                        ? capacity() * COMPILER_GROWTH_FECTOR
+                                        : n;
   myFirst = new T[newCap]();
   for (int i = 0; i < newCap; i++) {
     myFirst[i] = (i < orgSize) ? tempPtr[i] : T();

@@ -80,26 +80,17 @@ int main() {
 
 int inputAnInteger(int begin, int end) {
   char string[80];
-
-  //  cin.getline(string, 80, '\n');
   cin >> string;
-
   if (strlen(string) == 0 || strlen(string) >= 3) {
     return -1;
   }
-
   for (unsigned int i = 0; i < strlen(string); i++) {
     if (string[i] < '0' || string[i] > '9') {
       return -1;
     }
   }
-
   int number = atoi(string);
-  if (number >= begin && number <= end) {
-    return number;
-  } else {
-    return -1;
-  }
+  return ((number >= begin && number <= end) ? number : -1);
 }
 
 void signIn(MemberDatabase &memberDatabase) {

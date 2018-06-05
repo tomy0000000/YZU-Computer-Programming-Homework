@@ -17,16 +17,17 @@ class Member {
 public:
   Member(string theEmail = "", string thePassword = "", string theIdNumber = "",
          string theName = "", string thePhone = "");
-  void setEmail(string theEmail);
   string getEmail();
-  void setPassword(string thePassword);
   string getPassword();
-  void setIdNumber(string theIdNumber);
   string getIdNumber();
-  void setName(string theName);
   string getName();
-  void setPhone(string thePhone);
   string getPhone();
+  void setEmail(string theEmail);
+  void setPassword(string thePassword);
+  void setIdNumber(string theIdNumber);
+  void setName(string theName);
+  void setPhone(string thePhone);
+  // Display details of the member
   void display();
 
 private:

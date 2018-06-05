@@ -20,16 +20,10 @@ using std::endl;
 
 extern char hours[17][8];
 
-// MovieDatabase default constructor loads movies from the file Movies.dat
 MovieDatabase::MovieDatabase() { loadMovies(); }
-
-// MovieDatabase destructor saves movies into the file Movies.dat
 MovieDatabase::~MovieDatabase() { saveMovies(); }
-
-int MovieDatabase::getNumMovies() { return movies.size(); }
-
+long MovieDatabase::getNumMovies() { return movies.size(); }
 Movie MovieDatabase::getMovie(int movieCode) { return movies[movieCode]; }
-
 void MovieDatabase::setMovieSeat(int movieCode, int dateCode,
                                  int sessionTimeCode, int row, int col) {
   movies[movieCode].setOccupiedSeat(dateCode, sessionTimeCode, row, col);

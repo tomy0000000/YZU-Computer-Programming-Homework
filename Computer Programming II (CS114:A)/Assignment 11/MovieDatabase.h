@@ -15,20 +15,21 @@
 
 class MovieDatabase {
 public:
-  MovieDatabase();  // calls loadMovies()
-  ~MovieDatabase(); // calls saveMovies()
-
-  int getNumMovies();
-  Movie getMovie(
-      int movieCode); // return the movie object containing specified movieCode
+  MovieDatabase();
+  ~MovieDatabase();
+  // Get Total Amount of Movie
+  long getNumMovies();
+  Movie getMovie(int movieCode);
+  // Toggle a movie seat to occupied (true)
   void setMovieSeat(int movieCode, int dateCode, int sessionTimeCode, int row,
                     int col);
+  // Display movie table available for sale
   void displaySessionTimes(char movieNames[][60], char availableDates[][12]);
 
 private:
-  vector<Movie> movies; // vector of the movies
-  void loadMovies();    // loads movies from the file Movies.dat
-  void saveMovies();    // stores movies into the file Movies.dat
+  vector<Movie> movies;
+  void loadMovies();
+  void saveMovies();
 };
 
 #endif

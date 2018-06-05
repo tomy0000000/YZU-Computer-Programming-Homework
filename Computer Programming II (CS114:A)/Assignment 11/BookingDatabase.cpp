@@ -21,9 +21,7 @@ extern char movieNames[30][60];
 extern char availableDates[10][12];
 
 BookingDatabase::BookingDatabase() { loadBookings(); }
-
 BookingDatabase::~BookingDatabase() { saveBookings(); }
-
 void BookingDatabase::addBooking(Booking newBooking) {
   bookings.push_back(newBooking);
 }
@@ -40,38 +38,32 @@ bool BookingDatabase::existingBooking(string email) {
 
 void BookingDatabase::displayBookings(string email,
                                       MovieDatabase &movieDatabase) {
-  bool found = false;
-  for (vector<Booking>::iterator it = bookings.begin(); it != bookings.end();
-       ++it) {
-    if (it->getEmail() == email) {
-      if (!found) {
-        cout << "Booking Histories: " << endl << endl;
-        found = true;
-      } else {
-        cout << endl;
+  if (existingBooking(email)) {
+    cout << "Booking Histories: " << endl;
+    for (vector<Booking>::iterator it = bookings.begin(); it != bookings.end();
+         ++it) {
+      if (it->getEmail() == email) {
+        cout << endl
+             << "Movie:\t\t\t" << movieNames[it->getMovieCode()] << endl
+             << "Date:\t\t\t" << availableDates[it->getDateCode()] << endl
+             << "Show Time:\t\t" << hours[it->getSessionTimeCode()] << endl
+             << "Seats:\t\t\t";
+        int numTickets = 0;
+        for (int i = 0; i < 4; i++) {
+          numTickets += it->getNumTickets(i);
+        }
+        for (int i = 0; i < numTickets; i++) {
+          cout << it->getSeletedSeat(i) << ((i == numTickets - 1) ? "" : " ");
+        }
+        cout << endl << endl;
+        it->displayBooking(movieDatabase);
+        cout << "------------------------------------------------------------";
       }
-      cout << "Movie:\t\t\t" << movieNames[it->getMovieCode()] << endl
-           << "Date:\t\t\t" << availableDates[it->getDateCode()] << endl
-           << "Show Time:\t\t" << hours[it->getSessionTimeCode()] << endl
-           << "Seats:\t\t\t";
-      int numTickets = 0;
-      for (int i = 0; i < 4; i++) {
-        numTickets += it->getNumTickets(i);
-      }
-      for (int i = 0; i < numTickets; i++) {
-        cout << it->getSeletedSeat(i) << ((i == numTickets - 1) ? "" : " ");
-      }
-      cout << endl << endl;
-      it->displayBooking(movieDatabase);
-      cout << "--------------------";
     }
-  }
-  if (!found) {
-    cout << endl << "No Booking History Found!" << endl << endl;
-    cout << "--------------------" << endl;
+    cout << "---------------------" << endl;
   } else {
-    cout << "-------------------------------------------------------------"
-         << endl;
+    cout << endl << endl << "No Booking History Found!" << endl << endl;
+    cout << "--------------------" << endl;
   }
 }
 

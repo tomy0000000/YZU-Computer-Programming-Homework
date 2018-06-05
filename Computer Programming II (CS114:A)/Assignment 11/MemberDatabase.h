@@ -15,27 +15,23 @@
 
 class MemberDatabase {
 public:
-  MemberDatabase();               // calls loadMembers()
-  ~MemberDatabase();              // calls saveMembers()
-  vector<Member>::iterator end(); // returns members.end()
-
-  // returns true if there is a member object containing specified id
-  bool existingId(string id);
-
-  // returns true if there is a member object containing specified email
-  bool existingEmail(string email);
-
-  // adds a member object to the end of the vector members
+  MemberDatabase();
+  ~MemberDatabase();
+  // Get iterator pointing to end
+  vector<Member>::iterator end();
+  // Add newMember to member database
   void addMember(Member newMember);
-
-  // returns an iterator which points to the member object containing specified
-  // email and password
+  // Check if given ID is already exists
+  bool existingId(string id);
+  // Check if given email is already exists
+  bool existingEmail(string email);
+  // Get iterator pointing to specific Member object
   vector<Member>::iterator getMember(string email, string password);
 
 private:
-  vector<Member> members; // vector of the members
-  void loadMembers();     // loads members from the file Members.dat
-  void saveMembers();     // stores members into the file Members.dat
+  vector<Member> members;
+  void loadMembers();
+  void saveMembers();
 };
 
 #endif

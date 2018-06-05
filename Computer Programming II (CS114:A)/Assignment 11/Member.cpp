@@ -21,6 +21,12 @@ Member::Member(string theEmail, string thePassword, string theIdNumber,
   setPhone(thePhone);
 }
 
+string Member::getEmail() { return string(email); }
+string Member::getPassword() { return string(password); }
+string Member::getIdNumber() { return string(idNumber); }
+string Member::getName() { return string(name); }
+string Member::getPhone() { return string(phone); }
+
 void Member::setEmail(string theEmail) {
   unsigned long length = theEmail.size();
   length = (length < 40 ? length : 39);
@@ -28,8 +34,6 @@ void Member::setEmail(string theEmail) {
     email[i] = theEmail[i];
   email[length] = '\0';
 }
-
-string Member::getEmail() { return string(email); }
 
 void Member::setPassword(string thePassword) {
   unsigned long length = thePassword.size();
@@ -39,8 +43,6 @@ void Member::setPassword(string thePassword) {
   password[length] = '\0';
 }
 
-string Member::getPassword() { return string(password); }
-
 void Member::setIdNumber(string theIdNumber) {
   unsigned long length = theIdNumber.size();
   length = (length < 12 ? length : 11);
@@ -48,8 +50,6 @@ void Member::setIdNumber(string theIdNumber) {
     idNumber[i] = theIdNumber[i];
   idNumber[length] = '\0';
 }
-
-string Member::getIdNumber() { return string(idNumber); }
 
 void Member::setName(string theName) {
   unsigned long length = theName.size();
@@ -59,8 +59,6 @@ void Member::setName(string theName) {
   name[length] = '\0';
 }
 
-string Member::getName() { return string(name); }
-
 void Member::setPhone(string thePhone) {
   unsigned long length = thePhone.size();
   length = (length < 12 ? length : 11);
@@ -68,8 +66,6 @@ void Member::setPhone(string thePhone) {
     phone[i] = thePhone[i];
   phone[length] = '\0';
 }
-
-string Member::getPhone() { return string(phone); }
 
 void Member::display() {
   cout << "1. Name:\t\t\t" << name << endl

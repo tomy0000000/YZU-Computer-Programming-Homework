@@ -14,6 +14,12 @@ using std::cout;
 using std::endl;
 
 Booking::Booking() {}
+string Booking::getEmail() { return string(email); }
+int Booking::getMovieCode() { return movieCode; }
+int Booking::getDateCode() { return dateCode; }
+int Booking::getSessionTimeCode() { return sessionTimeCode; }
+int Booking::getNumTickets(int ticketType) { return numTickets[ticketType]; }
+string Booking::getSeletedSeat(int number) { return seletedSeats[number]; }
 
 void Booking::setEmail(string theEmail) {
   unsigned long length = theEmail.size();
@@ -24,32 +30,23 @@ void Booking::setEmail(string theEmail) {
   email[length] = '\0';
 }
 
-string Booking::getEmail() { return string(email); }
-
 void Booking::setMovieCode(int theMovieCode) {
   movieCode = (theMovieCode > 0 ? theMovieCode : 0);
 }
-
-int Booking::getMovieCode() { return movieCode; }
 
 void Booking::setDateCode(int theDateCode) {
   dateCode = (theDateCode > 0 ? theDateCode : 0);
 }
 
-int Booking::getDateCode() { return dateCode; }
-
 void Booking::setSessionTimeCode(int theSessionTimeCode) {
   sessionTimeCode = (theSessionTimeCode > 0 ? theSessionTimeCode : 0);
 }
 
-int Booking::getSessionTimeCode() { return sessionTimeCode; }
-
 void Booking::setNumTickets(int theNumTickets[]) {
-  for (int i = 0; i < 4; i++)
+  for (int i = 0; i < 4; i++) {
     numTickets[i] = (theNumTickets[i] > 0 ? theNumTickets[i] : 0);
+  }
 }
-
-int Booking::getNumTickets(int ticketType) { return numTickets[ticketType]; }
 
 void Booking::setSeletedSeats(string theSeletedSeats[], int numSeats) {
   for (int i = 0; i < numSeats; i++) {
@@ -60,15 +57,8 @@ void Booking::setSeletedSeats(string theSeletedSeats[], int numSeats) {
   cout << endl;
 }
 
-string Booking::getSeletedSeat(int number) { return seletedSeats[number]; }
-
 void Booking::displayBooking(MovieDatabase &movieDatabase) {
-  cout << "\t\t\t\t"
-       << "No. of Tickets"
-       << "\t\t"
-       << "Price"
-       << "\t\t"
-       << "Subtotal" << endl;
+  cout << "\t\t\t\tNo. of Tickets\t\tPrice\t\tSubtotal" << endl;
   int Num = 0, Price = 0, Sub = 0, Total = 0;
   char ticketType[4][15] = {"Adult\t\t\t", "Concession\t\t", "Disability\t\t",
                             "Elderly\t\t\t"};
