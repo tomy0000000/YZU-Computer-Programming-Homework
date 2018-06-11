@@ -21,3 +21,5 @@ Homework for:
 * Compiler
 * Linter
 * Coding C++ on Mac
+* End of Line?
+* STL Algorithm
