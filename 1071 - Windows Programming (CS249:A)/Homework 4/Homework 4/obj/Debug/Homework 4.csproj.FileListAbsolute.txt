@@ -1,0 +1,10 @@
+\\Mac\Home\Documents\Homework 4\Homework 4\bin\Debug\Homework 4.exe.config
+\\Mac\Home\Documents\Homework 4\Homework 4\bin\Debug\Homework 4.exe
+\\Mac\Home\Documents\Homework 4\Homework 4\bin\Debug\Homework 4.pdb
+\\Mac\Home\Documents\Homework 4\Homework 4\obj\Debug\Homework 4.csprojAssemblyReference.cache
+\\Mac\Home\Documents\Homework 4\Homework 4\obj\Debug\Homework_4.Form1.resources
+\\Mac\Home\Documents\Homework 4\Homework 4\obj\Debug\Homework_4.Properties.Resources.resources
+\\Mac\Home\Documents\Homework 4\Homework 4\obj\Debug\Homework 4.csproj.GenerateResource.cache
+\\Mac\Home\Documents\Homework 4\Homework 4\obj\Debug\Homework 4.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Homework 4\Homework 4\obj\Debug\Homework 4.exe
+\\Mac\Home\Documents\Homework 4\Homework 4\obj\Debug\Homework 4.pdb

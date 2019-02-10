@@ -1,0 +1,10 @@
+\\Mac\Home\Documents\Homework 8\Homework 8\bin\Debug\Homework 8.exe.config
+\\Mac\Home\Documents\Homework 8\Homework 8\bin\Debug\Homework 8.exe
+\\Mac\Home\Documents\Homework 8\Homework 8\bin\Debug\Homework 8.pdb
+\\Mac\Home\Documents\Homework 8\Homework 8\obj\Debug\Homework 8.csprojAssemblyReference.cache
+\\Mac\Home\Documents\Homework 8\Homework 8\obj\Debug\Homework_8.Form1.resources
+\\Mac\Home\Documents\Homework 8\Homework 8\obj\Debug\Homework_8.Properties.Resources.resources
+\\Mac\Home\Documents\Homework 8\Homework 8\obj\Debug\Homework 8.csproj.GenerateResource.cache
+\\Mac\Home\Documents\Homework 8\Homework 8\obj\Debug\Homework 8.csproj.CoreCompileInputs.cache
+\\Mac\Home\Documents\Homework 8\Homework 8\obj\Debug\Homework 8.exe
+\\Mac\Home\Documents\Homework 8\Homework 8\obj\Debug\Homework 8.pdb
