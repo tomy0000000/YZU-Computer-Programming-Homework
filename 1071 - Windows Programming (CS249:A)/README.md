@@ -1,4 +1,4 @@
-# 1071 CS249/A 視窗程式設計
+# 1071 CS249/A 視窗程式設計 (Windows Programming)
 
 ## Homework
 
