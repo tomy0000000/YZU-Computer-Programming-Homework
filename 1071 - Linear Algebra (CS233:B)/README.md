@@ -1,4 +1,4 @@
-# 1071 CS233/A 線性代數 (Linear Algebra)
+# 1071 CS233/B 線性代數 (Linear Algebra)
 
 ## Homework
 

@@ -1,4 +1,4 @@
-# 1061 CS106/A 程式設計(二)
+# 1061 CS106/A 程式設計(一)
 
 ## Assignments
 * Assignment 1
