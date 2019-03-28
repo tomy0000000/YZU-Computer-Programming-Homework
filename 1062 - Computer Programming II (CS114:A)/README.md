@@ -1,6 +1,4 @@
-# 1062 CS114/A 程式設計(二)
-
-`Computer Programming (II)`
+# 1062 CS114/A 程式設計(二) (Computer Programming (II))
 
 ## Homework
 
