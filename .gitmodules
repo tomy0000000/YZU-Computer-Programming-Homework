@@ -7,3 +7,6 @@
 [submodule "1071 - Linear Algebra (CS233:B)"]
 	path = 1071 - Linear Algebra (CS233:B)
 	url = https://github.com/tomy0000000/YZU-Linear-Algebra
+[submodule "1071 - Data Structures (CS203:A)"]
+	path = 1071 - Data Structures (CS203:A)
+	url = https://github.com/tomy0000000/YZU-Data-Structures.git
