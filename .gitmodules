@@ -7,3 +7,12 @@
 [submodule "1071 - Data Structures (CS203:A)"]
 	path = 1071 - Data Structures (CS203:A)
 	url = https://github.com/tomy0000000/YZU-Data-Structures.git
+[submodule "1062 - Computer Programming II (CS114:A)"]
+	path = 1062 - Computer Programming II (CS114:A)
+	url = https://github.com/tomy0000000/YZU-Computer-Programming-II.git
+[submodule "1061 - Computer Programming I (CS106:A)"]
+	path = 1061 - Computer Programming I (CS106:A)
+	url = https://github.com/tomy0000000/YZU-Computer-Programming-I.git
+[submodule "1062 - Web Programming (CS380:B)"]
+	path = 1062 - Web Programming (CS380:B)
+	url = https://github.com/tomy0000000/YZU-Web-Programming.git
